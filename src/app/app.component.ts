@@ -94,4 +94,9 @@ export class AppComponent implements OnInit {
     this.gameList.filter(x => x.id === id)[0].isInCart = true;
     this.setGameList();
   }
+
+
+  XcQ(){
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+  }
 }
