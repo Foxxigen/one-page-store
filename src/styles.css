@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
+
+:root {
+    --font-color: #242424;
+    --secondary-font-color: #8a8a8a;
+}
+
+body {
+    margin: 0;
+    background-color: #c2c2c2;
+    font-family: 'Lato' !important;
+}
+
+
+.mat-menu-panel {
+    border-radius: 0px !important;
+    box-shadow: none;
+    border-right: 1px solid #cdcdcd;
+    max-width: 350px !important;
+    background-color: #f7f7f7;
+}
+
+.mat-menu-content:not(:empty) {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}

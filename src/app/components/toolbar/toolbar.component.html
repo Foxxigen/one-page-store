@@ -1,0 +1,42 @@
+<mat-toolbar class="toolbar-wrapper">
+  <img src="../assets/elements/logo.png" />
+  <button class="menu-trigger-button" mat-flat-button [matMenuTriggerFor]="appMenu">
+    <img src="../assets/elements/cart.png" />
+    {{itemsInCart}}
+  </button>
+</mat-toolbar>
+<mat-menu #appMenu="matMenu" xPosition="before">
+  <ng-template matMenuContent>
+    <div *ngIf="itemsInCart > 0" (click)="$event.stopPropagation()" class="menu-info">
+      <div class="menu-counter">
+        {{itemsInCart}} item<div *ngIf="itemsInCart > 1">s </div> in cart
+      </div>
+      <div class="menu-button">
+        <div class="menu-price">
+          $ {{sumPrice}}
+        </div>
+
+        <button class="menu-clear-button" (click)="clearCart()" mat-flat-button> clear cart </button>
+      </div>
+    </div>
+    <div *ngIf="itemsInCart === 0" (click)="$event.stopPropagation()" class="menu-info">
+      <div class="menu-counter">
+        no items in cart
+      </div>
+    </div>
+    <div (click)="$event.stopPropagation()" class="card-item" *ngFor="let game of gameList |  gameInCartFilter">
+      <img class="card-item-picture" src="../assets/elements/{{game.image}}" />
+      <div class="card-item-content">
+        <div class="card-item-name">
+          {{game.name}}
+        </div>
+        <div (click)="removeGameFromCart(game.id, $event)" class="card-item-remove-button">
+          remove
+        </div>
+      </div>
+      <div class="card-item-price">
+        {{game.currency}} {{game.price}}
+      </div>
+    </div>
+  </ng-template>
+</mat-menu>

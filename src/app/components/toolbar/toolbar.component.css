@@ -1,0 +1,107 @@
+.toolbar-wrapper {
+    justify-content: space-between;
+    padding: 0 10%;
+    background-color: #dedede;
+}
+
+.menu-trigger-button {
+    height: inherit;
+    border-radius: 0;
+    background-color: inherit;
+    font-family: 'Lato';
+    font-weight: bold;
+    color: var(--font-color);
+    font-size: 12px
+}
+
+.menu-trigger-button[aria-expanded] {
+    background-color: #f7f7f7;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+}
+
+.card-item {
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+}
+
+.card-item-content {
+    margin: auto;
+}
+
+.card-item-picture {
+    margin: 5px;
+}
+
+.card-item-name {
+    width: 185px;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: var(--font-color);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.card-item-remove-button {
+    text-decoration: underline;
+    font-size: 12px;
+    text-transform: capitalize;
+    cursor: pointer;
+    display: none;
+    margin: 5px;
+    color: var(--font-color);
+}
+
+.card-item:hover .card-item-remove-button {
+    display: flex;
+}
+
+.card-item-price {
+    display: flex;
+    font-size: 12px;
+    color: var(--secondary-font-color);
+    font-weight: bold;
+    margin: auto 10px;
+    min-width: 35px;
+}
+
+
+.menu-info {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.menu-counter {
+    display: flex;
+    color: var(--font-color);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: auto 0;
+}
+
+.menu-price {
+    color: var(--font-color);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: auto 10px;
+}
+
+.menu-button {
+    display: flex;
+}
+
+.menu-clear-button {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0px 20px;
+}
