@@ -13,7 +13,7 @@
       </div>
       <div class="menu-button">
         <div class="menu-price">
-          $ {{sumPrice}}
+          $ {{sumPrice | number:'1.2-2'}}
         </div>
 
         <button class="menu-clear-button" (click)="clearCart()" mat-flat-button> clear cart </button>
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="card-item-price">
-        {{game.currency}} {{game.price}}
+        {{game.currency}} {{game.price | number:'1.2-2'}}
       </div>
     </div>
   </ng-template>

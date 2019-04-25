@@ -1,11 +1,12 @@
 <app-toolbar></app-toolbar>
 <div class="wrapper">
   <div class="game-of-the-week-card">
-    <div class="game-of-the-week-title">
-      game of the week
-    </div>
+
     <div class="game-of-the-week-image-container">
-      <img (click)="XcQ()" class="game-of-the-week-image" src="../assets/elements/witcher_game.png" />
+      <div class="game-of-the-week-title">
+        game of the week
+      </div>
+      <img class="game-of-the-week-image" src="../assets/elements/witcher_game.png" />
     </div>
   </div>
   <div class="game-carousel">
@@ -19,20 +20,20 @@
           {{game.name}}
         </div>
         <div *ngIf="game.isBought == false && game.isInCart == false" class="game-spot-buttons">
-          <div class="game-spot-discount">
+          <div *ngIf="game.discount != null" class="game-spot-button game-spot-discount">
             {{game.discount}}
           </div>
-          <button (click)="putToCart(game.id)" mat-flat-button class="game-spot-purchase-button">
-            {{game.currency}} {{game.price}}
-          </button>
+          <div (click)="putToCart(game.id)" class="game-spot-button game-spot-purchase-button">
+            {{game.currency}} {{game.price | number:'1.2-2'}}
+          </div>
         </div>
         <div *ngIf="game.isBought == true" class="game-spot-buttons">
-          <div class="game-spot-owned">
+          <div class="game-spot-button game-spot-owned">
             owned
           </div>
         </div>
         <div *ngIf="game.isInCart == true" class="game-spot-buttons">
-          <div class="game-spot-in-cart">
+          <div class="game-spot-button game-spot-in-cart">
             in cart
           </div>
         </div>
@@ -40,3 +41,5 @@
     </div>
   </div>
 </div>
+
+<div class="secret-button" (click)="XcQ()"></div>

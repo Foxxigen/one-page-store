@@ -1,14 +1,11 @@
 .wrapper {
     display: flex;
-    margin: 3% 10%;
+    margin: 1% 10%;
     margin-bottom: 0;
     flex-direction: column;
 }
 
 .game-of-the-week-card {
-    width: 80vw;
-    height: 36vh;
-
     display: flex;
     flex-direction: column;
 }
@@ -16,51 +13,45 @@
 .game-of-the-week-title {
     text-transform: uppercase;
     margin: 20px 0px;
-    font-weight: bold;
+    font-weight: 900;
     color: var(--font-color);
     font-size: 14px;
 }
 
 .game-of-the-week-image-container {
-    background-image: url(../assets/elements/witcher_game.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     height: inherit;
     width: inherit;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 
 .game-of-the-week-image {
     z-index: 2;
-    max-width: unset;
-    max-height: unset;
-    height: inherit;
-    width: inherit;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .game-carousel {
-    margin: 60px 0px;
-    margin-bottom: 0;
+    margin: 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .game-spot-card {
-    margin: 20px 8px;
+    margin: 20px 0px;
     background-color: #e1e1e1;
     border: 1px solid #cecece;
     width: min-content;
-    height: 200px;
+    height: 190px;
 }
 
 .game-spot-footer {
     display: flex;
     flex-direction: column;
-    height: 90px;
+    height: 70px;
     justify-content: space-between;
     background-color: #e1e1e1;
 }
@@ -69,80 +60,76 @@
     width: inherit;
     text-transform: uppercase;
     color: var(---font-color);
-    font-weight: bold;
+    font-weight: 900;
     font-size: 12px;
-    margin: 5px 10px;
+    margin: 2px 10px;
 }
 
 .game-spot-buttons {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
-.game-spot-discount {
+.game-spot-button {
+    padding: 5px 10px;
+    margin: 1px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.game-spot-button.game-spot-discount {
     color: #fff;
     background-color: #00905e;
-    padding: 5px 10px;
-    margin: 12px 5px;
-    border-radius: 3px;
-    font-size: 12px;
-    font-weight: bold;
+    margin-right: 0px;
 }
 
-.game-spot-purchase-button {
+.game-spot-button.game-spot-purchase-button {
     background-color: #000;
     color: #fff;
-    padding: 5px 10px;
-    margin: 12px 5px;
-    border-radius: 3px;
-    font-size: 12px;
-    font-weight: bold;
-    min-width: min-content;
-    line-height: unset;
-    font-family: 'Lato';
+    cursor: pointer;
 }
 
-.game-spot-owned {
+.game-spot-button.game-spot-owned {
     color: var(--secondary-font-color);
     background-color: #707070;
-    padding: 5px 10px;
-    margin: 12px 5px;
-    border-radius: 3px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
-.game-spot-in-cart {
+.game-spot-button.game-spot-in-cart {
     color: var(--secondary-font-color);
     background-color: #000;
-    padding: 5px 10px;
-    margin: 12px 5px;
-    border-radius: 3px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
-@media screen and (min-width: 1280px) {
-    .game-of-the-week-image-container::before {
-        content: "";
-        position: absolute;
-        width: 80vw;
-        height: 36vh;
-        background: inherit;
-        z-index: 0;
-        filter: blur(5px);
+.secret-button {
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 50px;
+    margin: 25% 40%;
+    z-index: 10;
+}
+
+@media screen and (min-width: 1320px) {
+    .wrapper {
+        margin: 3% 10%;
     }
 
     .game-of-the-week-image {
         max-width: inherit;
         max-height: inherit;
-        width: unset;
     }
 
     .game-carousel {
         flex-wrap: nowrap;
+        justify-content: center;
     }
 
+    .game-of-the-week-image-container {
+        display: grid;
+    }
+
+    .game-spot-card {
+        margin: 20px 9px;
+    }
 }

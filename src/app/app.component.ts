@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
       {
         id: 1,
         name: `oddworld: stranger's wrath`,
-        price: 100,
+        price: 9.99,
         currency: '$',
         discount: '-50%',
         image: 'oddworlds.png',
@@ -38,9 +38,9 @@ export class AppComponent implements OnInit {
       {
         id: 2,
         name: `assasin's creed: director's cut`,
-        price: 100,
+        price: 10.50,
         currency: '$',
-        discount: '-50%',
+        discount: null,
         image: 'creed.png',
         isBought: false,
         isInCart: true,
@@ -48,9 +48,9 @@ export class AppComponent implements OnInit {
       {
         id: 3,
         name: `neverwinter nights`,
-        price: 100,
+        price: 4.99,
         currency: '$',
-        discount: ' - 50 % ',
+        discount: '-50%',
         image: 'neverwinter.png',
         isBought: false,
         isInCart: false,
@@ -58,9 +58,9 @@ export class AppComponent implements OnInit {
       {
         id: 4,
         name: `the settlers 2: gold edition`,
-        price: 100,
+        price: 7.35,
         currency: '$',
-        discount: '-50%',
+        discount: '-30%',
         image: 'settlers.png',
         isBought: false,
         isInCart: false,
@@ -68,9 +68,9 @@ export class AppComponent implements OnInit {
       {
         id: 5,
         name: `chaos on deponia`,
-        price: 100,
+        price: 1.99,
         currency: '$',
-        discount: '-50%',
+        discount: '-90%',
         image: 'deponia.png',
         isBought: false,
         isInCart: true,
@@ -96,7 +96,7 @@ export class AppComponent implements OnInit {
   }
 
 
-  XcQ(){
-    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+  XcQ() {
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
   }
 }
