@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar-wrapper">
+<mat-toolbar (window:resize)="onResize($event)" [ngStyle]="{'padding': '0 ' + toolbarPadding}" class="toolbar-wrapper">
   <img src="../assets/elements/logo.png" />
   <button class="menu-trigger-button" mat-flat-button [matMenuTriggerFor]="appMenu">
     <img src="../assets/elements/cart.png" />

@@ -13,15 +13,29 @@ export class ToolbarComponent implements OnInit {
   itemsInCart = 0;
   inCartGameList: Game[];
   sumPrice = 0;
+  toolbarPadding = '';
 
   constructor(private globalService: GlobalServiceService) { }
 
   ngOnInit() {
+    if (window.innerWidth  > 1320) {
+      this.toolbarPadding = (window.innerWidth  - 1060) / 2 + 'px';
+    } else {
+      this.toolbarPadding = '10%';
+    }
     this.inCartGameList = [] as Game[];
     this.globalService.gameListToToolbar$.subscribe(gameList => {
       this.setGameList(gameList)
     });
 
+  }
+
+  onResize(event: any) {
+    if (event.target.innerWidth > 1320) {
+      this.toolbarPadding = (event.target.innerWidth - 1060) / 2 + 'px';
+    } else {
+      this.toolbarPadding = '10%';
+    }
   }
 
   setGameList(list: string | Game[]) {
