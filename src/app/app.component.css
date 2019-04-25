@@ -112,7 +112,7 @@
 
 @media screen and (min-width: 1320px) {
     .wrapper {
-        margin: 0;
+        margin: 3% 0px 0px 0px;
     }
 
     .game-of-the-week-image {
